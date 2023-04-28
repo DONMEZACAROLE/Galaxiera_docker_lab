@@ -1,0 +1,10 @@
+---
+  - name: my-play
+    hosts: all
+    become: yes 
+    tasks:
+      - name: task a
+        ansible.builtin.file:
+          path: /tesdir
+          state: directory
+          mode: '0755' 
