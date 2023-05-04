@@ -1,0 +1,9 @@
+---
+  - name: my-play
+    hosts: all
+    tasks:
+      - name: my-tasks
+        file:
+          path: /home/donmeza/tesdir
+          state: directory
+          mode: '755' 
