@@ -1,0 +1,28 @@
+---
+ - name: "play d'installation d'apache2 sur ubuntu"
+   host: custom
+   become: yes
+   tasts:
+     - name: "installation du packet apache"
+        apt:
+          name: apache2
+          state: present
+
+
+     - name: "demarrage du service apache2"
+       service:
+           name: apache2
+           state: started
+           enable: true
+
+    - name: "deploiment de notre site web"
+      copy:
+      src: /homedonmeza/pratices/index.html
+      dest: /var/www/html/index.html
+
+
+    - name: "modifiguration des port"
+      copy:
+      src: /home/donmeza/pratices/000-default.conf
+
+IDst:

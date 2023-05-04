@@ -1,7 +1,7 @@
 ---
   - name: my-play
     hosts: all
-    become: yes 
+    become: true
     tasks:
       - name: task a
         ansible.builtin.file:
