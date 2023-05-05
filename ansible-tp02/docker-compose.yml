@@ -1,0 +1,45 @@
+version: '3.1'
+
+services:
+   
+  server_web_1:
+    image: sshserver:last
+    container_name: server_web_1
+    networks:
+      - reseau_1
+
+  server_web_2:
+    image: sshserver:last
+    container_name: server_web_2
+    networks:
+      - reseau_1
+        
+  server_web_3:
+    image: sshserver:last
+    container_name: server_web_3
+    networks:
+      - reseau_2
+        
+  server_web_4:
+    image: sshserver:last
+    container_name: server_web_4
+    networks:
+      - reseau_2
+
+  server_web_5:
+    image: sshserver:last
+    container_name: server_web_5
+    networks:
+      - reseau_3
+
+  server_web_6:
+    image: sshserver:last
+    container_name: server_web_6
+    networks:
+      - reseau_3      
+
+networks:
+  reseau_1:
+  reseau_2:
+  reseau_3:
+
